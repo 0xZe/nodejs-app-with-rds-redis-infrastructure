@@ -30,5 +30,6 @@ module "load-balancer" {
 
   appvpc_id          = module.vpc-network.appvpc_id
   private_subnets_id = [module.vpc-network.private_subnet_id, module.vpc-network.private_subnet2_id]
+  public_subnets_id  = [module.vpc-network.public_subnet_id, module.vpc-network.public_subnet2_id]
   app-instance_id    = module.instances.app-instance_id
 }
