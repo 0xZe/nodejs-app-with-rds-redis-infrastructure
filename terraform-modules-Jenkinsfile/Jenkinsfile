@@ -1,0 +1,23 @@
+  pipeline {
+    agent any
+ 
+    stages {
+        stage('terraform init') {
+            steps{
+                sh """
+                   cd terraform-modules
+                   terraform init
+                  """
+            }
+        }
+        stage('terraform action') {
+            steps {
+                  sh """
+                    cd terraform-modules
+                    echo "Terraform action is --> ${action}"  
+                    terraform ${action} --auto-approve
+                  """
+            }
+        }
+    }  
+}
