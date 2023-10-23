@@ -11,8 +11,8 @@ module "vpc-network" {
 
 }
 
-module "db" {
-  source             = "./db"
+module "rds-redis" {
+  source             = "./rds-redis"
   appvpc_id          = module.vpc-network.appvpc_id
   private_subnets_id = [module.vpc-network.private_subnet_id, module.vpc-network.private_subnet2_id]
 
