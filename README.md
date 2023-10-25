@@ -17,13 +17,13 @@
 
 ## Step 2: Run container from the customed image to create the pipelines
 
-![1](https://github.com/0xZe/nodejs-application-with-rds-redis-infrastructure/assets/81789671c0e8f359-b27a-41e1-83a6-70a085ea3345)
+![1](https://github.com/0xZe/nodejs-application-with-rds-redis-infrastructure/assets/81789671/c713ff05-c747-40f5-9b76-6b5f8fb4fa5d)
 
 ## Step 3: Create a pipeline to provision the infrastructure
 
 - `Infrastructure is provisioned through a parameterized jenkins pipeline to facilitate build and destroy the infrastructure`
 
-![2](https://github.com/0xZe/nodejs-application-with-rds-redis-infrastructure/assets/817896710c4061da-c489-4c45-bc7c-7e4dcf0396fb)
+![2](https://github.com/0xZe/nodejs-application-with-rds-redis-infrastructure/assets/81789671/07242f24-4f8a-4543-a597-e58d4ce0e258)
 
 ## Infrastructure files consists of 4 modules:
 
@@ -32,11 +32,12 @@
  - `rds-redis module that provision RDS and ElastiCache`
  - `load-balancer module that provision the load balancer`
 
+
 - `modules Iac files is in` `modules` 
 - `Infrastructure Jenkinsfile is in` `modules-Jenkinsfile`
 
-![3](https://github.com/0xZe/nodejs-application-with-rds-redis-infrastructure/assets/81789671260e48e1-f077-4e15-b1a0-3ce481c104f4)
-![4](https://github.com/0xZe/nodejs-application-with-rds-redis-infrastructure/assets/817896714a960549-0a86-4dda-a75b-edfce2a1f0f1)
+![3](https://github.com/0xZe/nodejs-application-with-rds-redis-infrastructure/assets/81789671/22f9411a-d7fe-4df8-b69c-35cb04ace8c2)
+![4](https://github.com/0xZe/nodejs-application-with-rds-redis-infrastructure/assets/81789671/409a4320-c16d-4181-b257-58fc784080d6)
 
 - `Infrastructure is provisioned and resources are created`
 
@@ -51,8 +52,8 @@
 - `So we must first configure a bastion or jump host to act as a proxy to run our commands on the instance through that bastion`
 - `We will do that through creating a` `~/.ssh/config file` `in our master machine and put connection information in it`
 
-![8](https://github.com/0xZe/nodejs-application-with-rds-redis-infrastructure/assets/817896718df3c1c4-b45d-4e67-bd40-6f6e5e56c2c6)
-![9](https://github.com/0xZe/nodejs-application-with-rds-redis-infrastructure/assets/8178967135061440-39c8-4bef-bf0b-2a54219bd6ee)
+![8](https://github.com/0xZe/nodejs-application-with-rds-redis-infrastructure/assets/81789671/fd536bee-5d69-4a6f-a7a5-995e43959c3b)
+![9](https://github.com/0xZe/nodejs-application-with-rds-redis-infrastructure/assets/81789671/22f0a5bd-9a8c-46a8-9c90-13f5898cd3a1)
 
 - `Now We can run any commands in the private instance through the bastion`
 
@@ -74,14 +75,13 @@
 - `To use this method we need: `
 
 - `First, Download the agent.jar file from the Jenkins master machine to the slave machine`
-![5](https://github.com/0xZe/nodejs-application-with-rds-redis-infrastructure/assets/8178967181789090-5675-44a7-9629-1f1cf1f8b2ed)
+![5](https://github.com/0xZe/nodejs-application-with-rds-redis-infrastructure/assets/81789671/16c52e07-53b5-40b6-87d8-f2507be6e122)
 - `agent.jar is a java executable archive which contains procedure, library and utility for building a bridge between the layers`
 
 - `Second, Run agent.jar on the slave(the private instance)`
-![6](https://github.com/0xZe/nodejs-application-with-rds-redis-infrastructure/assets/81789671048ff891-636c-4bc9-a977-3408188c5ae6)
-
+![6](https://github.com/0xZe/nodejs-application-with-rds-redis-infrastructure/assets/81789671/e23c94e6-1f21-4cac-a9c6-643aa06ddd5b)
 - `Now the private instance is configured as a slave to the jenkins master and ready to run pipeline on it`
-![7](https://github.com/0xZe/nodejs-application-with-rds-redis-infrastructure/assets/817896714308dd63-0cfb-4a56-8fc9-b8f989396043)
+![7](https://github.com/0xZe/nodejs-application-with-rds-redis-infrastructure/assets/81789671/904fa7d2-a09d-47b1-866c-d9d2840152df)
 
 ## Step 6: Create a pipeline on the private instance to Deploy the nodejs application on it
 
