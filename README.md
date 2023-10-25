@@ -41,7 +41,7 @@
 
 ## Step 4: Install slave prerequisites and docker on the private instance
 
-- `Private instance will be slave to the jenkins master so we will need install slave prerequisites(like jave) and make           jenkins directory on it`
+- `Private instance will be slave to the jenkins master so we will need install slave prerequisites(like jave) and make jenkins directory on it`
 - `Also We will need docker on the private instance so we can deploy our nodejs application on it`
 
 ### A) Configure bastion
