@@ -75,12 +75,17 @@
 - `To use this method we need: `
 
 - `First, Download the agent.jar file from the Jenkins master machine to the slave machine`
+
 ![5](https://github.com/0xZe/nodejs-application-with-rds-redis-infrastructure/assets/81789671/16c52e07-53b5-40b6-87d8-f2507be6e122)
+
 - `agent.jar is a java executable archive which contains procedure, library and utility for building a bridge between the layers`
 
 - `Second, Run agent.jar on the slave(the private instance)`
+
 ![6](https://github.com/0xZe/nodejs-application-with-rds-redis-infrastructure/assets/81789671/e23c94e6-1f21-4cac-a9c6-643aa06ddd5b)
+
 - `Now the private instance is configured as a slave to the jenkins master and ready to run pipeline on it`
+
 ![7](https://github.com/0xZe/nodejs-application-with-rds-redis-infrastructure/assets/81789671/904fa7d2-a09d-47b1-866c-d9d2840152df)
 
 ## Step 6: Create a pipeline on the private instance to Deploy the nodejs application on it
