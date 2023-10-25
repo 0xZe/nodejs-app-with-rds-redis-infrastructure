@@ -27,14 +27,12 @@
 
 ## Infrastructure files consists of 4 modules:
 
- - `vpc-network module that provision vpc and subnets`
- - `instnces module that provision bastion and private application instance`
- - `rds-redis module that provision RDS and ElastiCache`
- - `load-balancer module that provision the load balancer`
+  - `vpc-network module that provision vpc and subnets`
+  - `instnces module that provision bastion and private application instance`
+  - `rds-redis module that provision RDS and ElastiCache`
+  - `load-balancer module that provision the load balancer`
 
-
-- `modules Iac files is in` `modules` 
-- `Infrastructure Jenkinsfile is in` `modules-Jenkinsfile`
+- `Infrastructure Jenkinsfile is in` `terraform-modules-Jenkinsfile`
 
 ![3](https://github.com/0xZe/nodejs-application-with-rds-redis-infrastructure/assets/81789671/22f9411a-d7fe-4df8-b69c-35cb04ace8c2)
 ![4](https://github.com/0xZe/nodejs-application-with-rds-redis-infrastructure/assets/81789671/409a4320-c16d-4181-b257-58fc784080d6)
