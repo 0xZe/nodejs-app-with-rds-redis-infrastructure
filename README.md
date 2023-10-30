@@ -1,8 +1,19 @@
 # nodejs-app-with-rds-redis-infrastructure
 # The idea of the project is: 
-- `Create jenkins infrastructure pipeline to provision infrastructure (RDS-redis) on AWS` 
-- `Create another pipeline to Deploy a nodejs application which connect to RDS and redis on a private instance`
-- `Expose the nodejs application from the private instance by a load balancer`
+
+The project is about:
+      ➡️Creating an infrastructure pipeline to provision the project infrastructure modules (vpc-network,RDS-redis,load balancer) on AWS.
+
+      ➡️Creating a jenkins pipeline to deploy a nodejs application in a private instance.
+
+      ➡️The nodejs application is connected to a RDS to store data and ElastiCache(redis) to provide managed in-memory caching for the application.
+
+Because the application is on a private instance:
+     ✅I used a bastion as a proxy (by creating ~/.ssh/config file) to run an ansible playbook which configures the instance to work as a slave to the jenkins master.
+
+    ✅I used JNLP(JAVA NETWORK LAUNCH PROTOCOL) to connect master with slave through execution of command on the controller.
+
+    ✅I used an application load balancer to expose the application.
 
 # Project diagram
 
