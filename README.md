@@ -13,8 +13,8 @@ The project is about:
 
 Because the application is on a private instance:
 
-      ✅I used a bastion as a proxy (by creating ~/.ssh/config file) to run an ansible playbook which configures 
-         the instance to work as a slave to the jenkins master.
+      ✅I used a bastion as a proxy (by creating ~/.ssh/config file) to run an ansible playbook which 
+         configures the instance to work as a slave to the jenkins master.
 
       ✅I used JNLP(JAVA NETWORK LAUNCH PROTOCOL) to connect master with slave through execution of command 
          on the controller.
